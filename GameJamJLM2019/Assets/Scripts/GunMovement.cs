@@ -17,7 +17,5 @@ public class GunMovement : MonoBehaviour
         Vector3 relativeLookAtPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         var angle = Mathf.Atan2(relativeLookAtPos.y, relativeLookAtPos.x);
         transform.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg);
-        Debug.DrawLine(transform.position, relativeLookAtPos, Color.red);
-        Debug.Log(relativeLookAtPos);
     }
 }
