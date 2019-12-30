@@ -27,6 +27,10 @@ public class Aura : MonoBehaviour
     {
         aura.Intensity = Mathf.Lerp(aura.Intensity, 0f, 0.0012f);
         srCross.color -= new Color(0,0,0, 0.0008f);
+        if(aura.Intensity == 0 || srCross.color.a == 0)
+        {
+            GameManager.Instance.NunDied();
+        }
     }
 
     public void refreshLight()

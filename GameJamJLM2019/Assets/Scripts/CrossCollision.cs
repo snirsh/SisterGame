@@ -11,6 +11,7 @@ public class CrossCollision : MonoBehaviour
             AudioManager.Instance.PlaySingle("SFX_EnemySlain");
             col.gameObject.SetActive(false);
             Destroy(col.gameObject);
+            GameManager.Instance.GhostKilled();
         }
     }
 }
