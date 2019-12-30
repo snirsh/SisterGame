@@ -186,8 +186,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6709059123312254987}
   - component: {fileID: 8305913690575235110}
+  - component: {fileID: 6947857196495539086}
   m_Layer: 0
-  m_Name: Lit Candle
+  m_Name: Candle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,6 +229,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.07728019
+--- !u!114 &6947857196495539086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076492870625316812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65a78f932b9c0c4f891cf307f2dada3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flames: {fileID: 6019628876519202642}
+  leftFlame: {fileID: 5396420412615344249}
+  rightFlame: {fileID: 2825704645482644976}
+  shadow: {fileID: 4988915103300759914}
 --- !u!114 &7068842073712071111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,11 +348,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6709059123312254987}
     m_Modifications:
-    - target: {fileID: 1278962375649610277, guid: d95da88540d2d6e44a0c4c40c581b24a,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1278962375649610280, guid: d95da88540d2d6e44a0c4c40c581b24a,
         type: 3}
       propertyPath: m_Name
@@ -424,7 +436,7 @@ PrefabInstance:
     - target: {fileID: 9133201526527734124, guid: d95da88540d2d6e44a0c4c40c581b24a,
         type: 3}
       propertyPath: position.x
-      value: 0.11191124
+      value: -1.3880887
       objectReference: {fileID: 0}
     - target: {fileID: 9133201526527734124, guid: d95da88540d2d6e44a0c4c40c581b24a,
         type: 3}
@@ -433,8 +445,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9133201526527734124, guid: d95da88540d2d6e44a0c4c40c581b24a,
         type: 3}
-      propertyPath: TransformIsDirty
-      value: 0
+      propertyPath: needUpdate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9133201526527734124, guid: d95da88540d2d6e44a0c4c40c581b24a,
         type: 3}
@@ -467,11 +479,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6709059123312254987}
     m_Modifications:
-    - target: {fileID: 1278962375649610277, guid: d95da88540d2d6e44a0c4c40c581b24a,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1278962375649610280, guid: d95da88540d2d6e44a0c4c40c581b24a,
         type: 3}
       propertyPath: m_Name
@@ -560,7 +567,7 @@ PrefabInstance:
     - target: {fileID: 9133201526527734124, guid: d95da88540d2d6e44a0c4c40c581b24a,
         type: 3}
       propertyPath: position.x
-      value: -0.12808871
+      value: -1.6280887
       objectReference: {fileID: 0}
     - target: {fileID: 9133201526527734124, guid: d95da88540d2d6e44a0c4c40c581b24a,
         type: 3}
@@ -569,8 +576,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9133201526527734124, guid: d95da88540d2d6e44a0c4c40c581b24a,
         type: 3}
-      propertyPath: TransformIsDirty
-      value: 0
+      propertyPath: needUpdate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9133201526527734124, guid: d95da88540d2d6e44a0c4c40c581b24a,
         type: 3}

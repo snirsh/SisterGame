@@ -12,9 +12,7 @@ public class GameManager : MonoBehaviour
     protected void Awake()
     {
         Instance = this;
-        foreach(GameObject candle in Candles)
-        {
-            
-        }
     }
+
+    
 }
