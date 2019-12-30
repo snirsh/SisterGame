@@ -31,7 +31,6 @@ public class Dimmer : MonoBehaviour
         {
             lastRand = random;
             random = Random.Range(minRange, maxRange);
-            Debug.Log(random);
             currentTime = 0f;
         }
     }
