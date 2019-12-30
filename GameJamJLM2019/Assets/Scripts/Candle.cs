@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightCandle : MonoBehaviour
+public class Candle : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
