@@ -259,7 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nunLight: {fileID: 5396420412615344249}
   minRange: 0.95
-  maxRange: 1.02
+  maxRange: 1.01
   timeToMove: 0.2
 --- !u!1 &6019628876519202642
 GameObject:

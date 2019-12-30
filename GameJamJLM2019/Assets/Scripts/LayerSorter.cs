@@ -32,7 +32,6 @@ public class LayerSorter : MonoBehaviour
         foreach (var rend_ in rends)
         {
             rend_.sortingOrder = order;
-            Debug.Log(rend_.sortingOrder);
         }
     }
 }
