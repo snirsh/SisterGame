@@ -26,7 +26,6 @@ public class Candle : MonoBehaviour
 
     public void LightCandle()
     {
-        Debug.Log("I AM HERE!");
         flames.SetActive(true);
         leftFlame.SetActive(true);
         rightFlame.SetActive(true);
