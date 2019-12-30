@@ -25,13 +25,12 @@ public class Aura : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         aura.Intensity = Mathf.Lerp(aura.Intensity, 0f, Time.time * speed);
-         srCross.color -= new Color(0,0,0,Time.time * speed);
+        aura.Intensity = Mathf.Lerp(aura.Intensity, 0f, 0.0012f);
+        srCross.color -= new Color(0,0,0, 0.0008f);
     }
 
     public void refreshLight()
     {
-        Debug.Log("Called");
         aura.Intensity = 0.5f;
         srCross.color = new Color(0, 0, 0, crossAlphaDefault);
     }
