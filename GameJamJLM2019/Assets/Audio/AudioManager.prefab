@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3086932415163697166}
   - component: {fileID: 3086932415163697165}
-  - component: {fileID: 3086932415163697164}
+  - component: {fileID: 6086238967770079124}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -128,7 +128,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3086932415163697164
+--- !u!114 &6086238967770079124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,9 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c971a8191ca3f9c4e976b33aad557825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SFX_EnemySlain: {fileID: 0}
-  SFX_Source_EnemySlain: {fileID: 0}
-  SFX_GameOver: {fileID: 0}
-  SFX_Source_GameOver: {fileID: 0}
-  SFX_Movement: {fileID: 0}
-  SFX_Source_Movement: {fileID: 0}
+  SFX_Source: {fileID: 3086932415163697165}
+  SFX_Array:
+  - {fileID: 8300000, guid: 4f97b8fde88d96544973e268593aa284, type: 3}
+  - {fileID: 8300000, guid: 067059102247d3a49bfc4558b32de5b8, type: 3}
+  - {fileID: 8300000, guid: a49129722e6b172419ce5fda75e9d306, type: 3}

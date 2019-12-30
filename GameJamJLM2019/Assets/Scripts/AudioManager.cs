@@ -1,35 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioClip SFX_EnemySlain;
-    public AudioSource SFX_Source_EnemySlain;
+    public AudioSource SFX_Source;
 
-    public AudioClip SFX_GameOver;
-    public AudioSource SFX_Source_GameOver;
+    public AudioClip[] SFX_Array;
 
-    public AudioClip SFX_Movement;
-    public AudioSource SFX_Source_Movement;
-
-    void Start()
+    public static AudioManager Instance { get; private set; }
+    public enum SFXClips{SFX_EnemySlain, SFX_GameOver, SFX_Movement};
+    protected void Awake()
     {
-        SFX_Source_EnemySlain.clip = SFX_EnemySlain;
-        SFX_Source_GameOver.clip = SFX_GameOver;
-        SFX_Source_Movement.clip = SFX_Movement;
+        Instance = this;
     }
 
-    public void PlayEnemySlain()
+    public void PlaySingle(string clip)
     {
-        SFX_Source_EnemySlain.Play();
-    }
-    public void PlayGameOver()
-    {
-        SFX_Source_GameOver.Play();
-    }
-    public void PlayMovement()
-    {
-        SFX_Source_Movement.Play();
+        SFXClips SFX = (SFXClips)Enum.Parse(typeof(SFXClips), clip.ToString());
+        SFX_Source.clip = SFX_Array[(int)SFX];
+        SFX_Source.Play();
     }
 }

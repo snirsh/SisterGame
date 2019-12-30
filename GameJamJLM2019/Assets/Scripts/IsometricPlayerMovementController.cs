@@ -23,6 +23,24 @@ public class IsometricPlayerMovementController : MonoBehaviour
         Vector2 currentPos = rbody.position;
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+        if ((Input.GetKeyDown(KeyCode.UpArrow) ||
+            Input.GetKeyDown(KeyCode.LeftArrow) ||
+            Input.GetKeyDown(KeyCode.DownArrow) ||
+            Input.GetKeyDown(KeyCode.RightArrow)) && !AudioManager.Instance.SFX_Source.isPlaying)
+        {
+            Debug.Log(AudioManager.Instance.SFX_Source.isPlaying);
+
+            AudioManager.Instance.PlaySingle("SFX_Movement");
+        }
+
+        if (Input.GetKey(KeyCode.UpArrow) == false &&
+            Input.GetKey(KeyCode.LeftArrow) == false &&
+            Input.GetKey(KeyCode.DownArrow) == false &&
+            Input.GetKey(KeyCode.RightArrow) == false)
+        {
+            AudioManager.Instance.SFX_Source.Stop();
+        }
+
         Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
         Vector2 movement = inputVector * movementSpeed;

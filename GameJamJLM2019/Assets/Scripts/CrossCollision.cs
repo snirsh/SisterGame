@@ -8,6 +8,7 @@ public class CrossCollision : MonoBehaviour
     {
         if(col.gameObject.name.Contains("Ghost"))
         {
+            AudioManager.Instance.PlaySingle("SFX_EnemySlain");
             col.gameObject.SetActive(false);
             Destroy(col.gameObject);
         }

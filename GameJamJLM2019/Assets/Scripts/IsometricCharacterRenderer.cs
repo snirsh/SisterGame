@@ -41,7 +41,7 @@ public class IsometricCharacterRenderer : MonoBehaviour
         }
 
         //tell the animator to play the requested state
-        animator.Play(directionArray[lastDirection]);
+        animator.Play(directionArray[lastDirection]);        
     }
 
     //helper functions
