@@ -6,7 +6,7 @@ public class LayerSorter : MonoBehaviour
 {
     SpriteRenderer rend;
     SpriteRenderer[] rends;
-    bool isStatic = true;
+    public bool isStatic = true;
     void Awake()
     {
         rend = GetComponent<SpriteRenderer>();
