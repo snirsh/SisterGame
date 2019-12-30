@@ -6,37 +6,33 @@ public class Dimmer : MonoBehaviour
 {
     public GameObject nunLight;
     HardLight2D candle;
-    float minRange = 1.95f;
-    float maxRange = 2.05f;
-    float random = 1.9f;
-    const float DEFAULT_TIME = 1f;
-    float time = DEFAULT_TIME;
+    public float minRange;
+    public float maxRange;
+    public float timeToMove;
+    float random;
     float lastRand;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    float currentTime = 0f;
 
     void Awake()
     {
         candle = nunLight.GetComponent<HardLight2D>();
-        time = 0f;
+        lastRand = candle.Range;
+        random = Random.Range(minRange, maxRange);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // time -= Time.deltaTime;
-        // if(time < 0){
-        lastRand = random;
-        random = Random.Range(minRange, maxRange);
-        Debug.Log(random);
-            // candle.Range = Mathf.Lerp(minRange, maxRange, Time.time * 0.1f);
-        candle.Range = Mathf.Lerp(lastRand, random, Time.time);
-            // time = DEFAULT_TIME;
-        // }
-        // Debug.Log(time);
+        if (currentTime <= timeToMove)
+        {
+            currentTime += Time.deltaTime;
+            candle.Range = Mathf.Lerp(lastRand, random, currentTime / timeToMove);
+        }
+        else
+        {
+            lastRand = random;
+            random = Random.Range(minRange, maxRange);
+            Debug.Log(random);
+            currentTime = 0f;
+        }
     }
 }
