@@ -17,7 +17,7 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             life--;
             if(life == 0){
-                GameManager.Instance.NunDied();
+                GameManager.Instance.NunDied("life");
             }
         }
     }

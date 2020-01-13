@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void NunDied()
+    public void NunDied(string reason)
     {
         loseCanvas.gameObject.SetActive(true);
         Time.timeScale = 0;

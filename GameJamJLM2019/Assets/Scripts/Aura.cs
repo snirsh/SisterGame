@@ -27,9 +27,9 @@ public class Aura : MonoBehaviour
     {
         aura.Intensity = Mathf.Lerp(aura.Intensity, 0f, 0.0012f);
         srCross.color -= new Color(0,0,0, 0.0008f);
-        if(aura.Intensity == 0 || srCross.color.a == 0)
+        if(aura.Intensity <= 0.05 || srCross.color.a <= 0.005)
         {
-            GameManager.Instance.NunDied();
+            GameManager.Instance.NunDied("light");
         }
     }
 
